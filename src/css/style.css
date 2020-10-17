@@ -75,14 +75,9 @@ h1, h2, h3, p {
 }
 
 
-
-
-
-
 /* launches */
 
 .launches {
-
 	width: 360px;
 	height: 100%;
 	border: 1px white solid;
@@ -109,7 +104,6 @@ h1, h2, h3, p {
 
 
 .launches-image img {
-
 	object-fit: cover;
 	display: block;
 	margin: 0 auto;
@@ -125,8 +119,6 @@ h1, h2, h3, p {
 }
 
 @media (max-width: 425px) {
-
-
 	.launches {
 		width: 310px;
 	}

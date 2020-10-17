@@ -19,7 +19,7 @@ const Header = ({ rockets, changeRocket}) => {
           {
             rockets.map((item, index) => (
               <li key={index} className="item">
-                <Link to="/rocket" 
+                <Link to={`/rocket`} 
                   onClick={() => {
                     changeRocket(item)
                   }} 

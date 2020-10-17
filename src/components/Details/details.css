@@ -13,7 +13,7 @@
 
 .details-image,
 .details-content {
-  margin: 0 30px;
+  margin: 0 30px 30px;
 }
 
 .details-youtube {
@@ -25,4 +25,13 @@
   max-width: 200px;
   display: block;
   margin: 25px auto;
+}
+
+.details-description {
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.details-loading {
+  text-align: center;
 }

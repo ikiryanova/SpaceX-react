@@ -57,22 +57,14 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Header rockets={this.state.rockets} changeRocket={this.changeRocket} />
-        <Route exact path='/'>
-          {this.state.company && <Home company={this.state.company} />}
-        </Route>
 
-        <Route exact path='/rocket'>
-          <Main rocket={this.state.rocket} />
-          {this.state.rocketFeatures && <Features {...this.state.rocketFeatures}/>}
-        </Route>
+        <Route exact path='/' render={() => this.state.company && <Home company={this.state.company} />}/>
 
-        <Route exact path='/calendar'>
-          <Calendar />
-        </Route>
+        <Route exact path='/rocket' render={() => this.state.rocketFeatures && <Features {...this.state.rocketFeatures}/>}/>
 
-        <Route exact path='/details'>
-          <Details />
-        </Route>
+        <Route exact path='/calendar' component={Calendar}/>
+
+        <Route exact path='/details/:id' component={Details}/>
         
         {this.state.company &&<Footer {...this.state.company.links}/>}
       </BrowserRouter>
